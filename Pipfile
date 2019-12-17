@@ -6,10 +6,17 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
-flask-sqlalchemy = "*"
 tweepy = "*"
+psycopg2 = "*"
+jinja2 = "*"
 basilica = "*"
+redis = "*"
+flask-sqlalchemy = "*"
+gunicorn = "*"
+python-dotenv = "*"
+python-decouple = "*"
+numpy = "*"
+scikit-learn = "*"
 
 [requires]
 python_version = "3.7"
