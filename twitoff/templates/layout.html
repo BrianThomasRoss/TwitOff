@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TweetTweet - {{ title }} </title>
+        <title>Who tweeted? - {{ title }} </title>
         <!-- CSS, Keywords, metadata goes here-->
         <link rel="stylesheet" href="https://unpkg.com/picnic">
     </head>
 
     <body>
         <nav>
-            <a href="/" class="brand"><span>TweetTweet</span></a>
+            <a href="/" class="brand"><span>Who Tweeted?</span></a>
             <!-- responsive -->
             <input id="bmenub" type="checkbox" class="show">
             <label for="bmenub" class="burger pseudo button">Menu</label>
             <div class="menu">
-                <a href="/update" class="button warning">Update Tweets</a>
+                <a href="/update" class="button warning", style="background-color:royalblue;">Update Tweets</a>
+                <a href="/reset" class="button warning", style="background-color: red;">Reset Database</a>
             </div>
         </nav>
 
