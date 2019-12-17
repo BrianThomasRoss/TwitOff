@@ -1,1 +1,1 @@
-web: gunicorn twitoff:app
+web: gunicorn twitoff:APP
