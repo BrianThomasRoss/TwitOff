@@ -23,9 +23,6 @@ def create_app():
 
     @app.route("/update")
     def update():
-        if config("ENV") == "production":
-            CACHE.flushall()
-            CACHED_COMPARISONS.clear()
         update_all()
         return render_template("layout.html", tweeters=Tweeter.query.all(),
                                 title="Cache cleared and tweeters are updated")

@@ -18,6 +18,8 @@ BASILICA = basilica.Connection(config('BASILICA_KEY'))
 
 def add_or_update_tweeter(username):
     """ adds or updates user and their tweets"""
+    
+    
     try:
         twitter_user = TWITTER.get_user(username)
 
@@ -39,6 +41,8 @@ def add_or_update_tweeter(username):
             db_tweet = Tweet(id=tweet.id, text=tweet.full_text[:300], embedding=embedding)
             db_tweeter.tweets.append(db_tweet)
             DB.session.add(db_tweet)
+
+    
             
 
     except Exception as e:
