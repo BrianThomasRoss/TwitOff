@@ -14,7 +14,8 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
     app.config['ENV'] = config('ENV')
-    DB.init_app(app)
+    DB.init_app(app)'
+    DB.create_all()
 
     @app.route("/")
     def root():
