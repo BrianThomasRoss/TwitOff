@@ -20,8 +20,10 @@ def add_or_update_tweeter(username):
     """ adds or updates user and their tweets"""
     try:
         twitter_user = TWITTER.get_user(username)
+
         db_tweeter = (Tweeter.query.get(twitter_user.id) or
                       Tweeter(id=twitter_user.id, handle=username))
+
         DB.session.add(db_tweeter)
         tweets = twitter_user.timeline(
             count=250, exclude_replies=True, include_rts=False,
