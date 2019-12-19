@@ -25,7 +25,7 @@ def create_app():
     def update():
         update_all()
         return render_template("layout.html", tweeters=Tweeter.query.all(),
-                                title="Cache cleared and tweeters are updated")
+                                title="Database Updated")
 
     @app.route("/tweeter", methods=['POST'])
     @app.route("/tweeter/<handle>", methods=['GET'])
